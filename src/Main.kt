@@ -2,8 +2,8 @@ import java.util.*
 
 fun main() {
 
-    val N : Int // Number of items in the List
-    val list = mutableListOf<String>()
+    val N : Int// Number of items in the List
+    val list : MutableList<String> = mutableListOf<String>()
     val scn = Scanner(System.`in`)
     print("How many items do you want to add to the list? : ")
     N = scn.nextInt()
@@ -16,10 +16,10 @@ fun main() {
     }
 
     val filteredList = list.filter {
-        it.contains("A")
-        it.contains("a")
-        it.contains("M")
-        it.contains("m")
+        it.contains("M" ) ||
+        it.contains("m" ) ||
+        it.contains("a" ) ||
+        it.contains("A" )
     }
 
     println(filteredList.toString().uppercase(Locale.getDefault()))
